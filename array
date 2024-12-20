@@ -1,0 +1,99 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    // Define the length of the array
+    const int length = 10;
+    int arr[length]; // Array declaration
+
+    // 1- Input values from the user
+    cout << "Enter 10 numbers: ";
+    for (int i = 0; i < length; i++) {
+        cin >> arr[i];
+    }
+
+    // 2- Print the array values in order
+    cout << "The array values are: ";
+    for (int i = 0; i < length; i++) {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+
+    // 3- Print the array values in reverse order
+    cout << "The array values in reverse are: ";
+    for (int i = length - 1; i >= 0; i--) {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+
+    // 4- Calculate the sum of the array elements
+    int sum = 0;
+    for (int i = 0; i < length; i++) {
+        sum += arr[i];
+    }
+    cout << "The sum of the array elements is: " << sum << endl;
+
+    // 5- Calculate the product of the array elements
+    long long product = 1;
+    for (int i = 0; i < length; i++) {
+        product *= arr[i];
+    }
+    cout << "The product of the array elements is: " << product << endl;
+
+    return 0;
+}
+
+
+        Question 2
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    // Define the number of rows and columns
+    const int rows = 3, columns = 3;
+
+    // Create a 2D array
+    int matrix[rows][columns];
+
+    // Input values from the user
+    cout << "Enter the values for the matrix (3x3):" << endl;
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < columns; j++) {
+            cout << "Element [" << i + 1 << "][" << j + 1 << "]: ";
+            cin >> matrix[i][j];
+        }
+    }
+
+    // Print the matrix
+    cout << "\nThe entered matrix:" << endl;
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < columns; j++) {
+            cout << matrix[i][j] << " ";
+        }
+        cout << endl; // Move to the next row
+    }
+
+    // Calculate and print the sum of each row
+    cout << "\nSum of each row:" << endl;
+    for (int i = 0; i < rows; i++) {
+        int rowSum = 0;
+        for (int j = 0; j < columns; j++) {
+            rowSum += matrix[i][j];
+        }
+        cout << "Sum of row " << i + 1 << ": " << rowSum << endl;
+    }
+
+    // Calculate and print the product of each row
+    cout << "\nProduct of each row:" << endl;
+    for (int i = 0; i < rows; i++) {
+        int rowProduct = 1;
+        for (int j = 0; j < columns; j++) {
+            rowProduct *= matrix[i][j];
+        }
+        cout << "Product of row " << i + 1 << ": " << rowProduct << endl;
+    }
+
+    return 0;
+}
